@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# 🏢 Sistema de Gestión de Empleados - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Interfaz web moderna para gestionar empleados. Conecta con una API REST de Spring Boot para realizar operaciones CRUD completas con validación en tiempo real.
 
-## Available Scripts
+## 📸 Capturas de Pantalla
 
-In the project directory, you can run:
+| Vista de Lista de Empleados | Agregar Empleado | Formulario de Edición |
+| :---: | :---: | :---: |
+| ![Vista Lista](https://raw.githubusercontent.com/RocioGuimet/RecursosHumanos_Frontend/main/Screenshots/Screenshot%20(1).png) | ![Vista Agregar](https://raw.githubusercontent.com/RocioGuimet/RecursosHumanos_Frontend/main/Screenshots/Screenshot%20(2).png) | ![Vista Formulario](https://raw.githubusercontent.com/RocioGuimet/RecursosHumanos_Frontend/main/Screenshots/Screenshot%20(3).png) |
 
-### `npm start`
+## ✨ Lo que verás
+- **Lista dinámica** de empleados con diseño responsive
+- **Formularios inteligentes** con validación en tiempo real
+- **Confirmaciones** antes de acciones críticas
+- **Feedback inmediato** con mensajes de éxito y error
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Tecnologías Utilizadas
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* **Framework**: React 18 con Hooks
+* **Enrutamiento**: React Router DOM para navegación entre vistas
+* **Peticiones HTTP**: Axios para comunicación con la API REST
+* **Estilos**: Bootstrap 5 para diseño responsive
+* **Validación**: Implementación personalizada en tiempo real
+* **Manejo de estado**: useState y useEffect para gestión de estado local
 
-### `npm test`
+## 📦 Instalación y Ejecución Local
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Sigue estos pasos para ejecutar el proyecto.
 
-### `npm run build`
+### **Prerrequisitos**
+- Backend ejecutándose (https://github.com/RocioGuimet/RecursosHumanos_Backend)
+- [React.js y npm](https://es.react.dev/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### **1. Clonar el Repositorio**
+```bash
+git clone https://github.com/RocioGuimet/RecursosHumanos_Frontend.git
+cd RecursosHumanos_Frontend
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### **2. Instalar e iniciar**
+```bash
+npm install
+npm start
+```
+La aplicación se abrirá automáticamente en http://localhost:3000.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### **3. ¡Listo!**
 
-### `npm run eject`
+Asegurate de que el backend esté corriendo en http://localhost:8080
+Si es así, ya podes utilizarlo
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🎨 Experiencia de usuario
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Diseño responsive** Se adapta a móviles, tablets y ordenadores
+- **Mensajes** de éxito, error y advertencia. Feedbacks claros
+- **Validación en tiempo real** Campos requeridos, sueldo positivo, errores que desaparecen al corregir
+- **Interfaz intuitiva** con Bootstrap 5
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 💡 Consejo
 
-## Learn More
+Prueba primero el backend con Postman para asegurarte de que la API funciona correctamente.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## ⚙️ Flujo de comunicación
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Frontend (React) → Petición HTTP con Axios → Backend (Spring Boot)
 
-### Code Splitting
+2. Backend procesa la petición → Responde con JSON → Frontend actualiza la UI
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+3. Validación coordinada: Validación en frontend (experiencia de usuario) + validación en backend (seguridad de datos)
 
-### Analyzing the Bundle Size
+## 📁 Estructura del Proyecto
+```
+RecursosHumanos_Frontend/
+├── public/
+│   ├── index.html              # Plantilla HTML principal
+│   └── ...                     # Iconos y assets públicos
+├── src/
+│   ├── empleados/              # Componentes principales de empleados
+│   │   ├── ListadoEmpleados.js # Lista principal
+│   │   ├── AgregarEmpleado.js  # Formulario de creación
+│   │   └── EditarEmpleado.js   # Formulario de edición
+│   ├── plantilla/              # Plantilla
+│   │   └── Navegacion.js       # Componente raíz con enrutamiento
+│   ├── App.js                  # Función App
+│   ├── App.css                 # Estilos principales
+│   └── index.js                # Punto de entrada de React
+├── Screenshots/                # Capturas para el README
+├── package.json                # Dependencias y scripts de npm
+└── README.md                   # Readme
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
